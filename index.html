@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumble Batch Cookies</title>
+    <meta name="description" content="Homemade happiness all from the heart. Made to order cookies.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="logo-text">Jumble Batch</span>
+            <span class="logo-sub">COOKIES</span>
+        </div>
+        <nav class="nav">
+            <a href="#bakery" class="nav-link">Bakery</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <div class="cart-icon">
+            🛒
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">Jumble Batch<br>Cookies</h1>
+                <p class="hero-subtitle">Homemade happiness<br>All from the Heart</p>
+                <div class="hero-mascots">
+                    <img src="assets/images/mascot_seal.png" alt="Seal Mascot" class="mascot seal">
+                    <img src="assets/images/mascot_boar.png" alt="Boar Mascot" class="mascot boar">
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlighted Cookie -->
+        <section class="highlighted-cookie" id="bakery">
+            <h2 class="section-title">Highlighted Cookie of the Week</h2>
+            <div class="highlight-card">
+                <div class="highlight-img-container">
+                    <img src="assets/images/mascot_seal.png" alt="Seal" class="floating-mascot">
+                    <img src="assets/images/highlight.png" alt="Caramelized Toffee & Dark Chocolate Cookies" class="highlight-img">
+                </div>
+                <div class="highlight-info">
+                    <h3>Caramelized Toffee<br>& Dark Chocolate<br>Cookies</h3>
+                    <a href="#order" class="btn btn-primary">Get a Taste!</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Made to Order Section -->
+        <section class="made-to-order">
+            <h2 class="section-title">Made to Order</h2>
+            <p class="disclaimer">*This food product is home-produced and processed. It was not produced in a commercial kitchen.*</p>
+            
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-icon">💻</div>
+                    <h4>Step 1: Order Online</h4>
+                    <p>Order and Pay Online. Schedule a date to pick up your cookie order</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">📍</div>
+                    <h4>Step 2: Pick Up Order</h4>
+                    <p>Drive out to the pick up spot. Show confirmation. Pick up your order</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">❤️</div>
+                    <h4>Step 3: Enjoy & Leave Us a Review</h4>
+                    <p>Enjoy your sweet treat of the day. You deserve it! Leave us a review!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Grid -->
+        <section class="product-menu" id="order">
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-badge">
+                        <img src="assets/images/mascot_boar.png" alt="Boar badge" class="badge-img">
+                    </div>
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/product_1.png" alt="Chocolate Cookie">
+                    </div>
+                    <h4>Chocolate Cookie</h4>
+                    <button class="btn btn-add">Add to Cart</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-badge">
+                        <img src="assets/images/mascot_seal.png" alt="Seal badge" class="badge-img">
+                    </div>
+                    <div class="product-img-wrapper">
+                        <img src="assets/images/product_2.png" alt="Snickerdoodle">
+                    </div>
+                    <h4>SnickerDoodle</h4>
+                    <button class="btn btn-add">Add to Cart</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-badge">
+                        <img src="assets/images/mascot_seal.png" alt="Seal badge" class="badge-img">
+                    </div>
+                    <div class="product-img-wrapper">
+                        <!-- Reusing product 1 image due to quota -->
+                        <img src="assets/images/product_1.png" alt="Chocolate Toffee">
+                    </div>
+                    <h4>Chocolate Toffee</h4>
+                    <button class="btn btn-add">Add to Cart</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-badge">
+                        <img src="assets/images/mascot_boar.png" alt="Boar badge" class="badge-img">
+                    </div>
+                    <div class="product-img-wrapper">
+                        <!-- Reusing product 2 image due to quota -->
+                        <img src="assets/images/product_2.png" alt="Cranberry White Chocolate">
+                    </div>
+                    <h4>Cranberry White Chocolate</h4>
+                    <button class="btn btn-add">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="bottom-mascot-row">
+             <img src="assets/images/mascot_seal.png" alt="Seal Mascot" class="footer-mascot">
+             <div class="logo-footer">
+                <span class="logo-text">Jumble Batch</span>
+                <span class="logo-sub">COOKIES</span>
+             </div>
+             <img src="assets/images/mascot_boar.png" alt="Boar Mascot" class="footer-mascot">
+        </section>
+    </main>
+
+    <footer class="footer" id="about">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#bakery">Bakery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#home">Cookie Care</a></li>
+                </ul>
+            </div>
+            <div class="footer-column" id="contact">
+                <h4>Contact Us</h4>
+                <p>3020 Jumble Dr</p>
+                <p>hello@jumblebatch.com</p>
+            </div>
+            <div class="footer-column">
+                <h4>Come to Our Pick Up Zone!</h4>
+                <div class="pickup-map">
+                    <div class="map-placeholder">Map Area</div>
+                    <p class="map-caption">See footer for map ref<br>Add on map pin</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Powered by Zamily LLC</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
