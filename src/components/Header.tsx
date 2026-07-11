@@ -7,27 +7,21 @@ interface HeaderProps {
 export default function Header({ cartCount }: HeaderProps) {
   return (
     <header className="header">
-      <div className="logo">
-        <span className="logo-text">Jumble Batch</span>
-        <span className="logo-sub">COOKIES</span>
+      <div className="logo-container">
+        <Link to="/">
+          <img src="/assets/images/logo.png" alt="Jumble Batch Cookies" className="logo-img" />
+        </Link>
       </div>
       <nav className="nav">
         <Link to="/#bakery" className="nav-link">Bakery</Link>
         <Link to="/about" className="nav-link">About</Link>
         <a href="#contact" className="nav-link">Contact</a>
       </nav>
-      <div className="cart-icon">
-        🛒
+      <div className="cart-container">
+        <img src="/assets/images/basket.png" alt="basket" className="cart-icon-img" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling!.style.display = 'inline'; }} />
+        <span className="cart-icon-emoji" style={{display: 'none', fontSize: '3rem'}}>🧺</span>
         {cartCount > 0 && (
-          <span style={{
-            fontSize: '0.8rem',
-            background: 'red',
-            color: 'white',
-            borderRadius: '50%',
-            padding: '2px 6px',
-            position: 'absolute',
-            top: '15px'
-          }}>
+          <span className="cart-badge">
             {cartCount}
           </span>
         )}

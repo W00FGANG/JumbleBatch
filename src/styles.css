@@ -36,66 +36,85 @@ a {
 
 /* Header */
 .header {
-    background-color: var(--light-green);
+    background-color: #118f67;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
+    padding: 15px 5%;
     position: sticky;
+    width: 100%;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.logo {
+.logo-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    background: var(--mint-green);
-    padding: 5px 15px;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
     border-radius: 20px;
+    transition: transform 0.3s ease;
 }
 
-.logo-text {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--dark-green);
-}
-
-.logo-sub {
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    font-weight: 700;
-    color: var(--text-dark);
+.logo-img:hover {
+    transform: scale(1.02);
 }
 
 .nav {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .nav-link {
-    background-color: var(--mint-green);
-    padding: 8px 20px;
-    border-radius: 20px;
-    font-weight: 600;
-    color: var(--text-light);
+    background-color: #aee2cd;
+    border: 2px solid white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
     transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-    background-color: var(--dark-green);
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.cart-icon {
-    font-size: 1.5rem;
+.cart-container {
+    position: relative;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.cart-icon:hover {
-    transform: scale(1.1);
+.cart-container:hover {
+    transform: scale(1.05);
+}
+
+.cart-icon-img {
+    width: 70px;
+    height: auto;
+}
+
+.cart-badge {
+    position: absolute;
+    bottom: 5px;
+    right: -5px;
+    background: #aee2cd;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 2px solid white;
 }
 
 /* Hero Section */
