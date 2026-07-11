@@ -120,7 +120,7 @@ a {
 /* Hero Section */
 .hero {
     position: relative;
-    background-image: url('assets/images/hero.png');
+    background-image: url('/assets/images/hero.png');
     background-size: cover;
     background-position: center;
     min-height: 70vh;
