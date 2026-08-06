@@ -12,13 +12,19 @@ export default function Home({ setCartCount }: HomeProps) {
 
   return (
     <>
-      {/* Hero Section */}
       <section className="hero" id="home">
         <div className="hero-content">
-          <h1 className="hero-title">Jumble Batch<br />Cookies</h1>
-          <p className="hero-subtitle">Homemade happiness<br />All from the Heart</p>
-          <div className="hero-mascots">
+          <div className="mascot-left">
             <img src="/assets/images/mascot_seal.png" alt="Seal Mascot" className="mascot seal" />
+          </div>
+          <div className="hero-text-container">
+            <h1 className="hero-title">Jumble Batch<br />Cookies</h1>
+            <p className="hero-subtitle">Homemade happiness<br />All from the Heart</p>
+            <Link to="#order">
+              <img src="/assets/images/OrderCookieButton.png" alt="Order Cookie" className="order-cookie-btn" />
+            </Link>
+          </div>
+          <div className="mascot-right">
             <img src="/assets/images/mascot_boar.png" alt="Boar Mascot" className="mascot boar" />
           </div>
         </div>
@@ -27,14 +33,13 @@ export default function Home({ setCartCount }: HomeProps) {
       {/* Highlighted Cookie */}
       <section className="highlighted-cookie" id="bakery">
         <h2 className="section-title">Highlighted Cookie of the Week</h2>
-        <div className="highlight-card">
-          <div className="highlight-img-container">
-            <img src="/assets/images/mascot_seal.png" alt="Seal" className="floating-mascot" />
-            <img src="/assets/images/highlight.png" alt="Caramelized Toffee & Dark Chocolate Cookies" className="highlight-img" />
-          </div>
+        <div className="highlight-section-container">
+          <div className="highlight-bg"></div>
+          <img src="/assets/images/highlight.png" alt="Caramelized Toffee & Dark Chocolate Cookies" className="highlight-img" />
+          <img src="/assets/images/mascot_seal.png" alt="Seal Mascot" className="floating-mascot" />
           <div className="highlight-info">
-            <h3>Caramelized Toffee<br />& Dark Chocolate<br />Cookies</h3>
-            <Link to="/#order" className="btn btn-primary">Get a Taste!</Link>
+            <h3>Caramelized Toffee & Dark Chocolate Cookies</h3>
+            <Link to="#order" className="btn-taste">Get a Taste!</Link>
           </div>
         </div>
       </section>
@@ -42,23 +47,23 @@ export default function Home({ setCartCount }: HomeProps) {
       {/* Made to Order Section */}
       <section className="made-to-order">
         <h2 className="section-title">Made to Order</h2>
-        <p className="disclaimer">*This food product is home-produced and processed. It was not produced in a commercial kitchen.*</p>
+        <p className="disclaimer">"This food product is home-produced and processed. It was not produced in a commercial kitchen."</p>
         
         <div className="steps-container">
           <div className="step-card">
-            <div className="step-icon">💻</div>
+            <img src="/assets/images/Step1.png" alt="Step 1" className="step-img" />
             <h4>Step 1: Order Online</h4>
-            <p>Order and Pay Online. Schedule a date to pick up your cookie order</p>
+            <p>Order and Pay Online.<br/><br/>Schedule a date to pick up your cookie order</p>
           </div>
           <div className="step-card">
-            <div className="step-icon">📍</div>
+            <img src="/assets/images/Step2.png" alt="Step 2" className="step-img" />
             <h4>Step 2: Pick Up Order</h4>
-            <p>Drive out to the pick up spot. Show confirmation. Pick up your order</p>
+            <p>Drive out to the pick up spot,<br/><br/>Show confirmation<br/>Pick up your order</p>
           </div>
           <div className="step-card">
-            <div className="step-icon">❤️</div>
+            <img src="/assets/images/Step3.png" alt="Step 3" className="step-img" />
             <h4>Step 3: Enjoy & Leave Us a Review</h4>
-            <p>Enjoy your sweet treat of the day. You deserve it! Leave us a review!</p>
+            <p>Enjoy your sweet treat of the day. You deserve it! <br/><br/>Leave us a review!</p>
           </div>
         </div>
       </section>
@@ -91,15 +96,6 @@ export default function Home({ setCartCount }: HomeProps) {
             onAdd={handleAdd} 
           />
         </div>
-      </section>
-
-      <section className="bottom-mascot-row">
-        <img src="/assets/images/mascot_seal.png" alt="Seal Mascot" className="footer-mascot" />
-        <div className="logo-footer">
-          <span className="logo-text">Jumble Batch</span>
-          <span className="logo-sub">COOKIES</span>
-        </div>
-        <img src="/assets/images/mascot_boar.png" alt="Boar Mascot" className="footer-mascot" />
       </section>
     </>
   );
