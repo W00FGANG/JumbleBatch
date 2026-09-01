@@ -36,7 +36,7 @@ export default function Home({ setCartCount }: HomeProps) {
         <div className="highlight-section-container">
           <div className="highlight-bg"></div>
           <img src="/assets/images/highlight.png" alt="Caramelized Toffee & Dark Chocolate Cookies" className="highlight-img" />
-          <img src="/assets/images/mascot_seal.png" alt="Seal Mascot" className="floating-mascot" />
+          <img src="/assets/images/mascot_turtle.png" alt="Turtle Mascot" className="floating-mascot" />
           <div className="highlight-info">
             <h3>Caramelized Toffee & Dark Chocolate Cookies</h3>
             <Link to="#order" className="btn-taste">Get a Taste!</Link>

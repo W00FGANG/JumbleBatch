@@ -15,7 +15,7 @@ export default function Header({ cartCount }: HeaderProps) {
       <nav className="nav">
         <Link to="/#bakery" className="nav-link">Bakery</Link>
         <Link to="/about" className="nav-link">About</Link>
-        <a href="#contact" className="nav-link">Contact</a>
+        <Link to="/contact" className="nav-link">Contact</Link>
       </nav>
       <div className="cart-container">
         <img src="/assets/images/basket.png" alt="basket" className="cart-icon-img" onError={(e) => { e.currentTarget.style.display = 'none'; e.currentTarget.nextElementSibling!.style.display = 'inline'; }} />
