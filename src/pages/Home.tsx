@@ -14,18 +14,44 @@ export default function Home({ setCartCount }: HomeProps) {
     <>
       <section className="hero" id="home">
         <div className="hero-content">
-          <div className="mascot-left">
-            <img src="/assets/images/mascot_seal.png" alt="Seal Mascot" className="mascot seal" />
+          <div className="hero-cookie-col hero-cookie-left-col">
+            <img
+              src="/assets/images/CookieImageLeft.png"
+              alt="Assorted Jumble Batch Cookies"
+              className="hero-cookie-side hero-cookie-left"
+            />
           </div>
+
           <div className="hero-text-container">
-            <h1 className="hero-title">Jumble Batch<br />Cookies</h1>
-            <p className="hero-subtitle">Homemade happiness<br />All from the Heart</p>
-            <Link to="#order">
-              <img src="/assets/images/OrderCookieButton.png" alt="Order Cookie" className="order-cookie-btn" />
+            <div className="hero-title-group">
+              <h1 className="hero-title">
+                <span className="hero-title-line">Jumble Batch</span>
+                <span className="hero-title-line">Cookies</span>
+              </h1>
+              <div className="hero-subtitle-wrap">
+                <p className="hero-subtitle">
+                  Homemade happiness
+                  <br />
+                  All from the Heart
+                </p>
+              </div>
+            </div>
+
+            <Link to="#order" className="order-cookie-link">
+              <img
+                src="/assets/images/OrderCookieButton.png"
+                alt="Order Cookie"
+                className="order-cookie-btn"
+              />
             </Link>
           </div>
-          <div className="mascot-right">
-            <img src="/assets/images/mascot_boar.png" alt="Boar Mascot" className="mascot boar" />
+
+          <div className="hero-cookie-col hero-cookie-right-col">
+            <img
+              src="/assets/images/CookieImageRight.png"
+              alt="Assorted Jumble Batch Cookies"
+              className="hero-cookie-side hero-cookie-right"
+            />
           </div>
         </div>
       </section>

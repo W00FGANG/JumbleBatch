@@ -206,92 +206,257 @@ a {
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* Hero Section */
+/* Hero Section — Vibrant Studio Jade & Mint Product Stage */
 .hero {
   position: relative;
-  background-image: url("/assets/images/hero.png");
-  background-size: cover;
-  background-position: center;
-  min-height: 70vh;
+  /* Balanced vibrant studio green: bright, lively mint-jade spotlights with a rich medium-emerald backdrop */
+  background:
+    radial-gradient(
+      ellipse 30% 60% at 12% 50%,
+      rgba(138, 247, 214, 0.65) 0%,
+      rgba(64, 209, 166, 0.32) 55%,
+      transparent 82%
+    ),
+    radial-gradient(
+      ellipse 30% 60% at 88% 50%,
+      rgba(138, 247, 214, 0.65) 0%,
+      rgba(64, 209, 166, 0.32) 55%,
+      transparent 82%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(158, 250, 221, 0.6) 0%,
+      rgba(64, 209, 166, 0.28) 48%,
+      transparent 75%
+    ),
+    linear-gradient(
+      135deg,
+      #34b891 0%,
+      #229975 48%,
+      #147a5b 100%
+    );
+  min-height: 750px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   text-align: center;
-  padding: 40px 20px;
+  padding: 0;
+  overflow: hidden;
+  border-bottom: 4px solid #6ee7b7;
+  box-shadow:
+    inset 0 16px 40px rgba(255, 255, 255, 0.14),
+    inset 0 -24px 48px rgba(6, 46, 35, 0.32);
 }
 
+/* Studio directional key-light beam from top-left */
 .hero::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3); /* Overlay for text readability */
+  inset: 0;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.22) 0%,
+      transparent 45%,
+      rgba(6, 48, 36, 0.24) 100%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Center stage studio ring reflection */
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(216, 253, 240, 0.42) 0%,
+    rgba(110, 231, 183, 0.14) 55%,
+    transparent 74%
+  );
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
+  justify-content: space-between;
 }
 
-.hero-title {
-  font-size: 4rem;
-  color: var(--mint-green);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  line-height: 1.1;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
+.hero-cookie-col {
+  position: relative;
+  flex: 0 1 395px;
+  height: 750px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+  pointer-events: none;
 }
 
-.hero-subtitle {
-  font-size: 1.2rem;
-  color: var(--text-light);
-  font-weight: 600;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+.hero-cookie-left-col {
+  justify-content: flex-start;
+}
+
+.hero-cookie-right-col {
+  flex: 0 1 385px;
+  justify-content: flex-end;
+}
+
+/* High-Contrast Studio Cookie Enhancement:
+   Warm golden color pop + bright mint rim-light + crisp studio contact shadow */
+.hero-cookie-side {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter:
+    brightness(1.06)
+    contrast(1.12)
+    saturate(1.18)
+    drop-shadow(0 0 14px rgba(216, 253, 240, 0.45))
+    drop-shadow(16px 22px 5px rgba(5, 42, 31, 0.48))
+    drop-shadow(28px 36px 24px rgba(4, 34, 25, 0.3));
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-cookie-left {
+  object-position: left center;
+}
+
+.hero-cookie-right {
+  object-position: right center;
 }
 
 .hero-text-container {
+  flex: 1 1 540px;
+  max-width: 540px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  max-width: 500px;
+  justify-content: center;
+  gap: 28px;
+  padding: 44px 20px;
+  z-index: 3;
+}
+
+.hero-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.hero-title {
+  font-family: "Poetsen One", var(--font-heading);
+  font-size: clamp(3.3rem, 5.4vw, 72px);
+  font-weight: 400;
+  color: #d8fbee;
+  -webkit-text-stroke: 4px #04291e;
+  paint-order: stroke fill;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  letter-spacing: 0.6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  filter:
+    drop-shadow(0 5px 0 #031d15)
+    drop-shadow(0 12px 24px rgba(0, 0, 0, 0.55));
+}
+
+.hero-title-line {
+  display: block;
+}
+
+.hero-subtitle-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.hero-subtitle {
+  font-family: "Poetsen One", var(--font-heading);
+  font-size: clamp(1.35rem, 2.4vw, 30px);
+  font-weight: 400;
+  color: #d8fbee;
+  -webkit-text-stroke: 3px #04291e;
+  paint-order: stroke fill;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  text-align: center;
+  filter:
+    drop-shadow(0 3px 0 #031d15)
+    drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45));
+}
+
+.order-cookie-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Bright studio pedestal halo behind the center Order cookie */
+.order-cookie-link::before {
+  content: "";
+  position: absolute;
+  inset: -22px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(167, 243, 208, 0.65) 0%,
+    rgba(52, 211, 153, 0.28) 52%,
+    transparent 74%
+  );
+  z-index: 0;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.order-cookie-link:hover::before {
+  transform: scale(1.14);
 }
 
 .order-cookie-btn {
-  width: 250px;
-  height: auto;
-  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1;
+  width: 215px;
+  height: 215px;
+  object-fit: contain;
   cursor: pointer;
-  margin-top: 20px;
+  filter:
+    brightness(1.05)
+    contrast(1.1)
+    saturate(1.15)
+    drop-shadow(0 0 14px rgba(167, 243, 208, 0.4))
+    drop-shadow(16px 22px 6px rgba(2, 18, 13, 0.72))
+    drop-shadow(28px 36px 26px rgba(0, 0, 0, 0.5));
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.35s ease;
 }
 
 .order-cookie-btn:hover {
-  transform: scale(1.05);
-}
-
-.mascot-left,
-.mascot-right {
-  display: flex;
-  justify-content: center;
-}
-
-.mascot {
-  width: 300px;
-  animation: float 4s ease-in-out infinite;
-}
-
-.mascot.seal {
-  animation-delay: 0s;
-}
-
-.mascot.boar {
-  animation-delay: 2s;
+  transform: translateY(-6px) scale(1.07) rotate(-3deg);
+  filter:
+    brightness(1.08)
+    contrast(1.12)
+    saturate(1.18)
+    drop-shadow(0 0 22px rgba(253, 224, 71, 0.55))
+    drop-shadow(20px 28px 8px rgba(2, 18, 13, 0.68))
+    drop-shadow(34px 44px 30px rgba(0, 0, 0, 0.55));
 }
 
 @keyframes float {
@@ -945,6 +1110,21 @@ a {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    min-height: 600px;
+  }
+
+  .hero-cookie-col {
+    flex: 0 1 260px;
+    height: 600px;
+  }
+
+  .hero-cookie-right-col {
+    flex: 0 1 255px;
+  }
+}
+
 @media (max-width: 900px) {
   .footer-content {
     grid-template-columns: 1fr 1fr;
@@ -995,12 +1175,40 @@ a {
     width: 100%;
   }
 
-  .hero-title {
-    font-size: 3rem;
+  .hero {
+    min-height: 520px;
   }
 
-  .hero-mascots {
-    gap: 20px;
+  .hero-cookie-col {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 155px;
+    height: 100%;
+    opacity: 0.9;
+  }
+
+  .hero-cookie-left-col {
+    left: -25px;
+  }
+
+  .hero-cookie-right-col {
+    right: -25px;
+  }
+
+  .hero-text-container {
+    margin: 0 auto;
+    padding: 48px 20px;
+  }
+
+  .hero-title {
+    font-size: 3.1rem;
+    -webkit-text-stroke: 2.5px #4e8772;
+  }
+
+  .order-cookie-btn {
+    width: 165px;
+    height: 165px;
   }
 
   .highlight-card {
@@ -1064,6 +1272,32 @@ a {
 
   .cart-container {
     padding: 6px 10px;
+  }
+
+  .hero-cookie-col {
+    width: 110px;
+    opacity: 0.75;
+  }
+
+  .hero-cookie-left-col {
+    left: -30px;
+  }
+
+  .hero-cookie-right-col {
+    right: -30px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .order-cookie-btn {
+    width: 145px;
+    height: 145px;
   }
 
   .footer-top-row {
